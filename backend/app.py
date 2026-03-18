@@ -9,8 +9,7 @@ app = Flask(__name__)
 CORS(app)
 logging.basicConfig(level=logging.INFO)
 
-# Load model once at startup
-# Will be None until Person A trains it in Week 2
+
 try:
     model = pickle.load(open('numa_model.pk1', 'rb'))
     logging.info("✅ Numa's brain loaded")
